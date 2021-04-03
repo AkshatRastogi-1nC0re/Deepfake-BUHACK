@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/one"
+        android:title="Rate Us" />
+    <item
+        android:id="@+id/two"
+        android:title="Download WCP App"/>
+    <item
+        android:id="@+id/three"
+        android:title="Terms and Conditions"/>
+    <item
+        android:id="@+id/four"
+        android:title="Logout"/>
+</menu>

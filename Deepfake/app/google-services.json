@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "8724895688",
+    "firebase_url": "https://hackathon-buhack-default-rtdb.firebaseio.com",
+    "project_id": "hackathon-buhack",
+    "storage_bucket": "hackathon-buhack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8724895688:android:1c9dab9bc56dca1ff912fd",
+        "android_client_info": {
+          "package_name": "com.example.deepfake"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8724895688-m8np09e5ooa7ftqgjckqnka3o1jqff0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3jJSvwC1nqSKVONtlCT8f4fB-M5n3OhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8724895688-m8np09e5ooa7ftqgjckqnka3o1jqff0u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
