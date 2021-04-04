@@ -38,77 +38,63 @@ public class end_lol extends AppCompatActivity {
 
         loading =  ProgressDialog.show(this,"Processing","Your video is being processed",false,false);
 
-//        try {
-//            TimeUnit.MINUTES.sleep(5);
-//        }
-//        catch (Exception e) {
-//            System.out.println("Oops! Something went wrong!");
-//        }
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                StringRequest stringRequest = new StringRequest(Request.Method.GET, Utilities.webAppUrl+"?action=getItems",
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                try {
+                                    String result_link = "";
+                                    JSONObject jobj = new JSONObject(response);
+                                    JSONArray jarray = jobj.getJSONArray("items");
+                                    JSONObject jo = jarray.getJSONObject(0);
+                                    result_link = jo.getString("result_link");
 
-//        new CountDownTimer(300000, 1000) {
-//
-//            @Override
-//            public void onTick(long millisUntilFinished) {
-//                // do something after 1s
-//            }
-//
-//            @Override
-//            public void onFinish() {
-//                // do something end times 5s
-//            }
-//
-//        }.start();
+
+                                    Toast.makeText(end_lol.this, "Operation Successful", Toast.LENGTH_SHORT).show();
+                                    loading.dismiss();
+
+                                    SharedPreferences prefos = getApplicationContext().getSharedPreferences("link", 0);
+                                    SharedPreferences.Editor editor = prefos.edit();
+                                    editor.putString("link", result_link);
+                                    editor.apply();
+
+                                    Intent picture_intent = new Intent(end_lol.this,successful.class);
+                                    startActivity(picture_intent);
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        },
+
+                        new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Toast.makeText(end_lol.this, "Error: Please Contact Akshat Rastogi", Toast.LENGTH_SHORT).show();
+
+                            }
+
+
+                        }
+
+
+                );
+
+                int socketTimeOut = 50000;
+                RetryPolicy policy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+
+                stringRequest.setRetryPolicy(policy);
+
+                RequestQueue queue = Volley.newRequestQueue(end_lol.this);
+                queue.add(stringRequest);
+            }
+        },300000);
         
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, Utilities.webAppUrl+"?action=getItems",
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            String result_link = "";
-                                JSONObject jobj = new JSONObject(response);
-                                JSONArray jarray = jobj.getJSONArray("items");
-                                JSONObject jo = jarray.getJSONObject(0);
-                                result_link = jo.getString("result_link");
 
-
-                            Toast.makeText(end_lol.this, "Operation Successful", Toast.LENGTH_SHORT).show();
-                            loading.dismiss();
-
-                            SharedPreferences prefos = getApplicationContext().getSharedPreferences("link", 0);
-                            SharedPreferences.Editor editor = prefos.edit();
-                            editor.putString("link", result_link);
-                            editor.apply();
-
-                            Intent picture_intent = new Intent(end_lol.this,successful.class);
-                            startActivity(picture_intent);
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                },
-
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(end_lol.this, "Error: Please Contact Akshat Rastogi", Toast.LENGTH_SHORT).show();
-
-                    }
-
-
-                }
-
-
-        );
-
-        int socketTimeOut = 50000;
-        RetryPolicy policy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-
-        stringRequest.setRetryPolicy(policy);
-
-        RequestQueue queue = Volley.newRequestQueue(end_lol.this);
-        queue.add(stringRequest);
 
     }
 }
