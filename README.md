@@ -1,4 +1,4 @@
-# Deepfake-BUHACK
+# Deepify - Create Deepfakes from your device
 
 Our project basically practices in the field of Deepfake technology. Our mobile-based application contains information and hands-on experience of its most recent developments.
 
@@ -10,3 +10,4 @@ We ran into a lot of challenges before completing this project.
 We faced several issues regarding the compatibility of the different platforms of python based machine learning scripts and android applications.
 
 We also ran into many other issues regarding our algorithms that we were using as an intermediate. This experience of finding these bugs, small and big is what made this experience worthwhile.
+
