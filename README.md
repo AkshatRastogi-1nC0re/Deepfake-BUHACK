@@ -1,5 +1,7 @@
 # Deepify - Create Deepfakes from your device
 
+![alt text](https://firebasestorage.googleapis.com/v0/b/hackathon-buhack.appspot.com/o/Presentation%20Images%2Fdeepifyapp.png?alt=media&token=219c2572-0ba7-4c2c-a365-0989ec1f7c4e)
+
 Our project basically practices in the field of Deepfake technology. Our mobile-based application contains information and hands-on experience of its most recent developments.
 
 In today's modern world of rapidly growing technology, it is important that technologies like DeepFake are spread to the general public in each and every stage of its development so that the threat that these technologies possess can be diluted over time.
