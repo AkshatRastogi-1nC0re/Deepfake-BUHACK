@@ -13,8 +13,7 @@ We faced several issues regarding the compatibility of the different platforms o
 
 We also ran into many other issues regarding our algorithms that we were using as an intermediate. This experience of finding these bugs, small and big is what made this experience worthwhile.
 
-Watch Live Demonstration Here !!
-[I'm an inline-style link](https://www.google.com)
+Watch Live Demonstration [Here !!](https://www.youtube.com/watch?v=2qiQuh53yBE&ab_channel=AkshatRastogi)
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/hackathon-buhack.appspot.com/o/Presentation%20Images%2F1.png?alt=media&token=9f834a88-99cf-4363-84df-fabec8d745af)
 ![alt text](https://firebasestorage.googleapis.com/v0/b/hackathon-buhack.appspot.com/o/Presentation%20Images%2F2.png?alt=media&token=9fa457bc-6cfe-4fa4-812d-f1303a108c9e)
